@@ -8,11 +8,8 @@ RestaurantMe is an app where you can easily save and prioritize restaurants you 
 Log-in;
 Log-out;
 Sign-up;
-Homepage (my restaurant list, nav bar: add, volver pag anterior,
-User Profile;/// delete
-My Restaurants list;///delete
+Homepage: my restaurant list + nav bar: add restaurant, return home, search
 Add a restaurant;
-Search/See restaurant;////
 Edit restaurant;
 Delete restaurant;
 
@@ -24,9 +21,9 @@ favoritos;
 Restaurant model
 ```
 {
-    name: String, (require: yes)
-    img: String, (require; default:url)/// imagen del usuario
-    budget: String (rango de precio) [array cerrado con dropdown]
+    name: {type: String, required: true}
+    img: {type: String, default: 'images/default-avatar.png'}
+    budget: type: String (rango de precio) [array cerrado con dropdown]
     priority: String (mayor descripcion) [array cerrado con dropdown]
     openHours: Objetc (key dia: horario) 
     veganMenu: String (si/no),
@@ -34,9 +31,9 @@ Restaurant model
     address: Objetc {address,CP, city, etc, barrio}
     neighborhood:
     geoLocation/coordenadas: Object {latitud long
-    cuisine: String,(italian, fast [array cerrado con dropdown]
-    ambiente: String (formal, w/friends, date, etc) [array cerrado con dropdown]
-    notas: String 
+    cuisine: String, 
+    ambiente: String, 
+    notas: String, 
     booking: String (url)
     menu: String (url)
 }
